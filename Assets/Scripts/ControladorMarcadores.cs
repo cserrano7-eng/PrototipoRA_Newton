@@ -18,7 +18,11 @@ public class ControladorMarcadores : MonoBehaviour
 
     private void AlCambiarEstado(ObserverBehaviour ob, TargetStatus estado)
     {
-        bool detectado = estado.Status == Status.TRACKED || estado.Status == Status.EXTENDED_TRACKED;
+        // Solo se considera detectado cuando la cámara ve el marcador directamente.
+        // EXTENDED_TRACKED significa que Vuforia ya no lo ve y solo estima su posición,
+        // por eso en ese estado también se pausa la simulación.
+        bool detectado = estado.Status == Status.TRACKED;
+
         if (!detectado && simulacion != null)
         {
             simulacion.Pausar(); // si se pierde el marcador, la simulación se pausa

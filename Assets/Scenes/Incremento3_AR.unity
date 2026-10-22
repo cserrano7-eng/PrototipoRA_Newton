@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 255359931}
   - component: {fileID: 255359930}
   - component: {fileID: 255359933}
+  - component: {fileID: 255359934}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -253,6 +254,29 @@ MonoBehaviour:
   distanciaMedida: 0
   distanciaTeorica: 0
   errorDistancia: 0
+--- !u!114 &255359934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255359928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57317f854f511f4bbfc8b719a0632ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metrosPorNewton: 0.004
+  largoMaximo: 0.3
+  grosor: 0.004
+  mostrarPesoYNormal: 1
+  mostrarEtiquetas: 1
+  tamanioEtiqueta: 28
+  colorAplicada: {r: 0.2, g: 0.5, b: 1, a: 1}
+  colorFriccion: {r: 1, g: 0.25, b: 0.2, a: 1}
+  colorNeta: {r: 0.2, g: 0.85, b: 0.3, a: 1}
+  colorPeso: {r: 1, g: 0.6, b: 0.1, a: 1}
+  colorNormal: {r: 0.75, g: 0.4, b: 1, a: 1}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,8 +458,8 @@ GameObject:
   - component: {fileID: 1393226313}
   - component: {fileID: 1393226312}
   - component: {fileID: 1393226311}
-  - component: {fileID: 1393226310}
   - component: {fileID: 1393226314}
+  - component: {fileID: 1393226315}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -443,25 +467,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1393226310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393226309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1393226312}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Astronaut_scaled
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 1393226312}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1393226311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -532,7 +537,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1393226310}
+  mPreview: {fileID: 1393226315}
 --- !u!4 &1393226313
 Transform:
   m_ObjectHideFlags: 0
@@ -563,6 +568,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marcador: {fileID: 1393226312}
   simulacion: {fileID: 255359933}
+--- !u!114 &1393226315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393226309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1393226312}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Astronaut_scaled
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 1393226312}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1590683243
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   simulacion: {fileID: 255359933}
+  tamanioTexto: 18
+  tamanioBoton: 22
 --- !u!4 &1590683245
 Transform:
   m_ObjectHideFlags: 0
