@@ -244,16 +244,31 @@ MonoBehaviour:
   masa: 2
   fuerza: 10
   mu: 0.1
+  masaMin: 1
+  masaMax: 20
+  pasoMasa: 0.5
+  fuerzaMin: 0
+  fuerzaMax: 100
+  pasoFuerza: 1
+  muMin: 0
+  muMax: 0.6
+  pasoMu: 0.05
+  longitudPista: 5
+  tiempoMaximo: 15
   escalaVisual: 0.02
-  tiempoMaximo: 2
   enEjecucion: 0
-  aTeorica: 0
+  finalizada: 0
+  aTeorica: 4.019
   aSimulada: 0
   errorPorcentual: 0
+  velocidad: 0
   tiempo: 0
   distanciaMedida: 0
   distanciaTeorica: 0
   errorDistancia: 0
+  tiempoLlegada: 0
+  tiempoLlegadaTeorico: 1.577397
+  errorTiempo: 0
 --- !u!114 &255359934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +634,8 @@ MonoBehaviour:
   simulacion: {fileID: 255359933}
   tamanioTexto: 18
   tamanioBoton: 22
+  altoDeslizador: 28
+  anchoPanel: 0.4
 --- !u!4 &1590683245
 Transform:
   m_ObjectHideFlags: 0
