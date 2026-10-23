@@ -5,6 +5,7 @@ public class ControladorMarcadores : MonoBehaviour
 {
     [SerializeField] private ObserverBehaviour marcador;
     [SerializeField] private SimulacionNewton simulacion;
+    [SerializeField] private PanelSimulacion panel;
 
     private void OnEnable()
     {
@@ -18,14 +19,17 @@ public class ControladorMarcadores : MonoBehaviour
 
     private void AlCambiarEstado(ObserverBehaviour ob, TargetStatus estado)
     {
-        // Solo se considera detectado cuando la cámara ve el marcador directamente.
-        // EXTENDED_TRACKED significa que Vuforia ya no lo ve y solo estima su posición,
-        // por eso en ese estado también se pausa la simulación.
+        // Solo cuenta como detectado cuando la cámara ve el marcador directamente
         bool detectado = estado.Status == Status.TRACKED;
 
-        if (!detectado && simulacion != null)
+        if (detectado)
         {
-            simulacion.Pausar(); // si se pierde el marcador, la simulación se pausa
+            if (panel != null) panel.SetSimulacion(simulacion); // el panel controla este escenario
+        }
+        else
+        {
+            if (simulacion != null) simulacion.Pausar();         // RF-02: se pausa al perder el marcador
+            if (panel != null) panel.Liberar(simulacion);
         }
     }
 }

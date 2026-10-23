@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class SimulacionNewton : MonoBehaviour
 {
+    public enum VariablePrincipal { Ninguna, Fuerza, Masa, Friccion }
+
+    [Header("Escenario (marcador)")]
+    public string nombreEscenario = "Segunda ley de Newton";
+    public VariablePrincipal variablePrincipal = VariablePrincipal.Ninguna;
+
     [Header("Parámetros (RF-03)")]
     public float masa = 5f;     // kg
     public float fuerza = 20f;  // N
@@ -17,7 +23,7 @@ public class SimulacionNewton : MonoBehaviour
     public float tiempoMaximo = 15f;  // s
 
     [Header("Escena AR")]
-    public float escalaVisual = 0.02f;
+    public float escalaVisual = 0.028f; // 14 cm de pista / 5 m
 
     [Header("Estado (RF-06)")]
     public bool enEjecucion = false;
