@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57317f854f511f4bbfc8b719a0632ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metrosPorNewton: 0.004
+  metrosPorNewton: 0.002
   largoMaximo: 0.3
   grosor: 0.004
   mostrarPesoYNormal: 1
@@ -288,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 383647088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0.015, z: 0}
+  m_LocalPosition: {x: -0.07, y: 0.015, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45ada657c70f3042a3fbef781d21065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreEscenario: "M3 \xB7 Friccion variable"
+  nombreEscenario: "M3 \xB7 Fricci\xF3n variable"
   variablePrincipal: 3
   masa: 5
   fuerza: 20
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57317f854f511f4bbfc8b719a0632ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metrosPorNewton: 0.004
+  metrosPorNewton: 0.002
   largoMaximo: 0.3
   grosor: 0.004
   mostrarPesoYNormal: 1
@@ -774,7 +774,7 @@ Transform:
   m_GameObject: {fileID: 996018515}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0.015, z: 0}
+  m_LocalPosition: {x: -0.07, y: 0.015, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57317f854f511f4bbfc8b719a0632ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metrosPorNewton: 0.004
+  metrosPorNewton: 0.002
   largoMaximo: 0.3
   grosor: 0.004
   mostrarPesoYNormal: 1
@@ -949,7 +949,7 @@ Transform:
   m_GameObject: {fileID: 1344857517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0.015, z: 0}
+  m_LocalPosition: {x: -0.07, y: 0.015, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
